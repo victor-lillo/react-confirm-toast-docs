@@ -1,0 +1,19 @@
+@use '@sass_settings/sizes.scss';
+
+@font-face {
+    font-family: opensans;
+    src: url(../../public/fonts/open_sans/OpenSans-Regular.ttf);
+}
+
+:root {
+    --section-width: 60%;
+    --main-bg-color: red;
+
+    --button-color: seagreen;
+
+}
+
+
+@media only screen and (max-width: sizes.$desktop) {
+    .section {}
+}

@@ -1,0 +1,47 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: opensans;
+  height: 100%;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+}
+
+.body {
+  background-color: lightpink;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  gap: 2rem;
+  padding: 1.5rem 0;
+}
+
+.button-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+}
+
+.a {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+}
+
+.occupy {
+  border: 1px solid red;
+}
