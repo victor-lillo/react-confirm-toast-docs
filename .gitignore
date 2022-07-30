@@ -33,7 +33,6 @@ yarn-error.log*
 token.ME
 READ.ME
 
-/dev
-
 # devDependencies
-
+dev
+.swc
