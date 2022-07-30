@@ -33,6 +33,7 @@ yarn-error.log*
 token.ME
 READ.ME
 
+/dev
 
 # devDependencies
 
