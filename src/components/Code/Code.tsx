@@ -1,28 +1,31 @@
 import React, { useEffect } from "react";
 import Prism from "prismjs";
+
 // import "prismjs/themes/prism-coy.css";
-// import "prismjs/themes/prism-coy.min.css";
 // import "prismjs/themes/prism-dark.css";
-// import "prismjs/themes/prism-funky.css";
 // import "prismjs/themes/prism-okaidia.css";
 // import "prismjs/themes/prism-solarizedlight.css";
 import "prismjs/themes/prism-tomorrow.css";
 // import "prismjs/themes/prism-twilight.css";
 
 interface Props {
-    code: string
+    children: string
     language?: string
 }
 
-function Code({ code, language = 'jsx' }: Props) {
+function Code({ language = 'jsx', children }: Props) {
 
     useEffect(() => {
         Prism.highlightAll();
-    }, [code, language]);
+    }, [children]);
 
     return (
         <pre>
-            <code className={`language-${language}`}>{code}</code>
+            <code
+                className={`language-${language}`}
+            >
+                {children}
+            </code>
         </pre>
     );
 }

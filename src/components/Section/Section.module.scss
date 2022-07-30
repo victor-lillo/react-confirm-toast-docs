@@ -6,26 +6,22 @@
     /* if no flex in parent:
     margin-right: auto;
     margin-left: auto; */
-    border: 1px solid red;
+    // border: 1px solid red;
 
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
-    // SASS variables for media queries
-    @media only screen and (min-width: #{sizes.$mobile}) {
-        border: 4px solid black;
-    }
-
-    @media only screen and (min-width: #{sizes.$tablet}) {
-        border: 4px solid grey;
-    }
-
-    @media only screen and (min-width: #{sizes.$desktop}) {
-        border: 4px solid white;
-    }
 }
 
 .full {
     width: 100%;
+}
+
+.flexRow {
+    flex-direction: row;
+}
+
+.black {
+    background-color: #121212;
+    color: white;
 }

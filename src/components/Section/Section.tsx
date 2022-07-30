@@ -6,6 +6,8 @@ import styles from './Section.module.scss'
 interface Props {
     children: ReactNode;
     width?: 'standard' | 'full';
+    background?: 'black';
+    flexRow?: boolean;
 }
 
 // Just for documentation
@@ -14,11 +16,15 @@ enum Width {
     full = '100%',
 }
 
-export default function Section({ children, width = 'standard', ...props }: Props) {
+export default function Section({ children, background, flexRow = false, width = 'standard', ...props }: Props) {
 
     const classes = classnames(
         styles.section,
-        styles[width]
+        styles[width],
+        {
+            [styles['flexRow']]: flexRow,
+            [styles['black']]: background === 'black',
+        }
     )
 
     return (

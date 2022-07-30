@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
+import type { NextPage } from 'next'
 
 import Layout from '@components/Layout';
 import Button from '@components/Button';
 import Section from '@components/Section';
 import Code from '@components/Code';
+import ConfirmToast from '@components/ConfirmToast';
 
-import { ConfirmToast } from 'react-confirm-toast'
-
-import type { NextPage } from 'next'
+// import { ConfirmToast } from 'react-confirm-toast'
 
 
 interface CompProps {
@@ -96,13 +96,9 @@ const examples: ExampleProps[] = [
 
 const Database: NextPage = () => {
 
-    // interface DivType
-
     const [selectedExample, setSelectedExample] = useState(examples[0])
 
-
     const customProps = (e: React.MouseEvent) => {
-
         const name = (e.target as HTMLButtonElement).name
         const value = (e.target as HTMLButtonElement).value
 
@@ -110,17 +106,18 @@ const Database: NextPage = () => {
 
         setSelectedExample((prevState) => ({
             ...prevState,
-            [name]: [value],
+            [name]: value,
             message: `${capitalizedName} set to ${value}`
         }))
-
     }
+
+
 
 
     const compString = (settings: ExampleProps) => {
         const { asModal, customCancel, customConfirm, message, position, showCloseIcon, theme, name } = settings
 
-        let str = '\n<ConfirmToast\n'
+        let str = '<ConfirmToast\n'
 
         if (asModal || asModal === false) str += `\tasModal={${asModal}}\n`
         if (customCancel) str += `\tcustomCancel={'${customCancel}'}\n`
@@ -136,58 +133,62 @@ const Database: NextPage = () => {
         return str
     }
 
-    // useEffect(() => {
-    //     setSelectedPosition('')
-    //     setSelectedTheme('')
-    // }, [selectedExample])
-
-
     return (
         <Layout>
             <Head>
-                <title>Fentos | Items </title>
+                <title>react-confirm-toast | Documentation </title>
             </Head>
 
-            <Section>
-                <h1>Items</h1>
+            <Section width='full' background='black'
+            >
+                <div className="title-container">
+
+                    <h1>react-confirm-toast</h1>
+                    <h3>Easy and light toast for confirming functions</h3>
+                </div>
             </Section>
 
             <Section>
                 <h1>Examples</h1>
 
-                <div className='container' >
+                <div className='example-container'>
 
-                    <Code code={compString(selectedExample)}></Code>
+                    <div className="code">
+                        <Code>
+                            {compString(selectedExample)}
+                        </Code>
+                    </div>
 
                     <ConfirmToast
                         customFunction={myFunction}
+                        childrenClassName='test'
                         {...selectedExample}
                     >
                         {examples.map((data, index) => {
                             return (
                                 <Button
                                     onClick={() => setSelectedExample(examples[index])}
+                                    selected={index === examples.indexOf(selectedExample)}
                                     key={index}
                                 > {data.name} </Button>
                             )
                         })}
                     </ConfirmToast>
                 </div>
-
             </Section>
 
-            <Section>
-                <div className='a' >
+            <Section flexRow>
+                <div className='change-container' >
                     <h1>Change position</h1>
-                    <div className='button-container'>
+                    <div className='change-container_buttons'>
                         {options.position.map((data) => {
                             return (
                                 <Button
                                     key={data}
                                     name='position'
-                                    value={data}
-                                    selected={data === selectedExample.position}
                                     onClick={(e) => customProps(e)}
+                                    selected={data === selectedExample.position}
+                                    value={data}
                                 >
                                     {data}
                                 </Button>
@@ -196,15 +197,16 @@ const Database: NextPage = () => {
                     </div>
                 </div>
 
-                <div className='a'>
-                    <div className='button-container'>
+                <div className='change-container'>
+                    <h1>Change theme</h1>
+                    <div className='change-container_buttons'>
                         {options.theme.map((data) => {
                             return (
                                 <Button
                                     key={data}
-                                    selected={data === selectedExample.theme}
                                     name='theme'
                                     onClick={(e) => customProps(e)}
+                                    selected={data === selectedExample.theme}
                                     value={data}
                                 >
                                     {data}
@@ -212,7 +214,6 @@ const Database: NextPage = () => {
                             )
                         })}
                     </div>
-                    <h1>Change theme</h1>
                 </div>
             </Section>
         </Layout >

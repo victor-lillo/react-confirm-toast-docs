@@ -15,7 +15,7 @@ interface Props {
 export default function Layout({ children, navbarClass, footerClass }: Props) {
     return (
         <>
-            <Navbar navbarClass={navbarClass} />
+            {/* <Navbar navbarClass={navbarClass} /> */}
             <main className='body'>{children}</main>
             <Footer footerClass={footerClass} />
         </>
