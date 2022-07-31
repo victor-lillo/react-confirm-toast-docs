@@ -7,9 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "github-first-deploy": "node dev/first-deploy.js && node dev/discord.js",
-    "github-update": "node dev/github-update.js && node dev/discord.js",
-    "test": "node dev/github-update.js"
+    "github-first-deploy": "node dev/first-deploy.js",
+    "github-update": "node dev/github-update.js"
   },
   "dependencies": {
     "@types/prismjs": "^1.26.0",
