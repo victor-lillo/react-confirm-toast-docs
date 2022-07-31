@@ -81,16 +81,6 @@ const examples: ExampleProps[] = [
         message: 'Do you want to continue and execute the function?',
         position: 'top-left' as const,
         theme: 'snow' as const
-    },
-    {
-        name: 'Example 5',
-        asModal: true,
-        showCloseIcon: false,
-        customCancel: 'Cancel',
-        customConfirm: 'Confirm',
-        message: 'Do you want to continue and execute the function?',
-        position: 'top-left' as const,
-        theme: 'dark' as const
     }
 ]
 
@@ -161,7 +151,7 @@ const Database: NextPage = () => {
 
                     <ConfirmToast
                         customFunction={myFunction}
-                        childrenClassName='test'
+                        childrenClassName='example-container_buttons'
                         {...selectedExample}
                     >
                         {examples.map((data, index) => {
