@@ -126,6 +126,7 @@ const Database: NextPage = () => {
         <Layout>
             <Head>
                 <title>react-confirm-toast | Documentation </title>
+                <meta name="description" content="A light and customizable confirm toast component."></meta>
             </Head>
 
             <Section width='full' background='black'>
