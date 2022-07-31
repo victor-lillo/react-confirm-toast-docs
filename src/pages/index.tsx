@@ -6,10 +6,9 @@ import Layout from '@components/Layout';
 import Button from '@components/Button';
 import Section from '@components/Section';
 import Code from '@components/Code';
-import ConfirmToast from '@components/ConfirmToast';
+// import ConfirmToast from '@components/ConfirmToast';
 
-// import { ConfirmToast } from 'react-confirm-toast'
-
+import { ConfirmToast } from 'react-confirm-toast'
 
 interface CompProps {
     asModal?: boolean,
@@ -34,7 +33,6 @@ interface ExampleProps extends NewProps {
 const myFunction = () => {
     console.log('Confirmed!');
 }
-
 
 const options = {
     position: ['bottom-left', 'bottom-right', 'top-left', 'top-right'],
@@ -101,9 +99,6 @@ const Database: NextPage = () => {
         }))
     }
 
-
-
-
     const compString = (settings: ExampleProps) => {
         const { asModal, customCancel, customConfirm, message, position, showCloseIcon, theme, name } = settings
 
@@ -129,12 +124,25 @@ const Database: NextPage = () => {
                 <title>react-confirm-toast | Documentation </title>
             </Head>
 
-            <Section width='full' background='black'
-            >
+            <Section width='full' background='black'>
                 <div className="title-container">
-
                     <h1>react-confirm-toast</h1>
                     <h3>Easy and light toast for confirming functions</h3>
+                </div>
+            </Section>
+
+            <Section>
+                <div className="title-container">
+                    <h3>Install the package</h3>
+                    <Code language='bash'>{`yarn add react-confirm-toast`}</Code>
+                    <h3>Import the component</h3>
+                    <Code>{`import { ConfirmToast } from 'react-confirm-toast'`}</Code>
+                    <h3>Add ConfirmToast to your app</h3>
+                    <Code>
+                        {`<ConfirmToast customFunction={myFunction}>\n\t{your clickable component}\n</ConfirmToast>`}
+                    </Code>
+                    <h3>Pass it your function and set it up. Check below!</h3>
+
                 </div>
             </Section>
 

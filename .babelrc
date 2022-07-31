@@ -9,7 +9,8 @@
                 "languages": [
                     "jsx",
                     "css",
-                    "html"
+                    "html",
+                    "bash"
                 ],
                 "plugins": [
                     "keep-markup"

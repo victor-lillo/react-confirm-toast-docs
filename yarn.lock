@@ -2325,10 +2325,10 @@ react-code-blocks@^0.0.9-0:
     styled-components "^5.1.1"
     tslib "^2.0.0"
 
-react-confirm-toast@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-confirm-toast/-/react-confirm-toast-1.0.1.tgz#e674ac5b1f061e90c83b30588dd9e4655dc4a23e"
-  integrity sha512-v3z7rocTx071wAG2ILn25dZKEAOe5CEwwuGWaFVf/M0ytEaLlWgr7CBBG7CtgDs7bzTvPOkRjweZXFuRj0ijZA==
+react-confirm-toast@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-confirm-toast/-/react-confirm-toast-1.0.4.tgz#dbaa0e343cbc25ac36a79a682a80c858f8782384"
+  integrity sha512-XYTfJAglM8wKMOXiuF2PxGfThF4sVXQwDiTry55KGAinDRw/qROU3i13HJ6kGhlDnu01oWRWkCjyPX9T83nbmg==
   dependencies:
     classnames-creator "^1.0.6"
     react-icons "^4.4.0"
