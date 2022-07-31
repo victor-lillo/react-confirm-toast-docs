@@ -6,6 +6,7 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   experimental: {
+    forceSwcTransforms: true,
     images: {
       allowFutureImage: true,
     },

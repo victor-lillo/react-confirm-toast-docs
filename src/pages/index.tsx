@@ -53,17 +53,17 @@ const examples: ExampleProps[] = [
     {
         name: 'Example 2',
         asModal: false,
-        showCloseIcon: false,
+        showCloseIcon: true,
         customCancel: 'Cancel',
         customConfirm: 'Confirm',
         message: 'Do you want to continue and execute the function?',
-        position: 'top-left' as const,
+        position: 'top-right' as const,
         theme: 'dark' as const
     },
     {
         name: 'Example 3',
         asModal: false,
-        showCloseIcon: false,
+        showCloseIcon: true,
         customCancel: 'Cancel',
         customConfirm: 'Confirm',
         message: 'Do you want to continue and execute the function?',
@@ -132,16 +132,19 @@ const Database: NextPage = () => {
             </Section>
 
             <Section>
-                <div className="title-container">
-                    <h3>Install the package</h3>
-                    <Code language='bash'>{`yarn add react-confirm-toast`}</Code>
-                    <h3>Import the component</h3>
-                    <Code>{`import { ConfirmToast } from 'react-confirm-toast'`}</Code>
-                    <h3>Add ConfirmToast to your app</h3>
-                    <Code>
-                        {`<ConfirmToast customFunction={myFunction}>\n\t{your clickable component}\n</ConfirmToast>`}
-                    </Code>
-                    <h3>Pass it your function and set it up. Check below!</h3>
+                <div className="info-container">
+                    <h1>Information</h1>
+                    <section>
+                        <h3>Install the package</h3>
+                        <Code language='bash'>{`yarn add react-confirm-toast`}</Code>
+                        <h3>Import the component</h3>
+                        <Code>{`import { ConfirmToast } from 'react-confirm-toast'`}</Code>
+                        <h3>Add ConfirmToast to your app</h3>
+                        <Code>
+                            {`<ConfirmToast customFunction={myFunction}>\n\t{your clickable component}\n</ConfirmToast>`}
+                        </Code>
+                        <h3>Pass it your function and set it up. Check the examples below!</h3>
+                    </section>
 
                 </div>
             </Section>
