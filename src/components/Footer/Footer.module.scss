@@ -1,10 +1,12 @@
+@use '@sass_settings/sizes.scss';
+
 .footer {
   padding: 2rem;
   background-color: var(--main-color);
   color: var(--secondary-letter-color);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   user-select: none;
 
   div {
@@ -21,6 +23,10 @@
   a {
     text-decoration: underline;
     transform: scale(1.5);
+  }
+
+  @media only screen and (max-width: #{sizes.$tablet}) {
+    justify-content: space-between;
   }
 }
 
