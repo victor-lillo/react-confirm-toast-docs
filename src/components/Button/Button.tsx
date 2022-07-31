@@ -19,18 +19,15 @@ export default function Button({ color, mode, selected, children, ...props }: Pr
             [styles[color ?? '']]: color,
             [styles[mode ?? '']]: mode,
             [styles['selected']]: selected
-
         },
     )
 
     return (
-
         <button
             className={classes}
             {...props}
         >
             {children}
         </button>
-
     )
 }
