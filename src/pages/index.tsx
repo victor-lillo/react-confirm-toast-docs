@@ -74,7 +74,7 @@ const examples: ExampleProps[] = [
     },
     {
         name: 'Example 4',
-        asModal: false,
+        asModal: true,
         showCloseIcon: false,
         customCancel: 'Cancel',
         customConfirm: 'Confirm',
@@ -169,7 +169,7 @@ const Database: NextPage = () => {
 
             <Section flexRow>
                 <div className='change-container' >
-                    <h1>Change position</h1>
+                    <h2>Change position</h2>
                     <div className='change-container_buttons'>
                         {options.position.map((data) => {
                             return (
@@ -188,7 +188,7 @@ const Database: NextPage = () => {
                 </div>
 
                 <div className='change-container'>
-                    <h1>Change theme</h1>
+                    <h2>Change theme</h2>
                     <div className='change-container_buttons'>
                         {options.theme.map((data) => {
                             return (
