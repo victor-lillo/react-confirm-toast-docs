@@ -5,7 +5,7 @@ import Prism from "prismjs";
 // import "prismjs/themes/prism-dark.css";
 // import "prismjs/themes/prism-okaidia.css";
 // import "prismjs/themes/prism-solarizedlight.css";
-import "prismjs/themes/prism-tomorrow.css";
+// import "prismjs/themes/prism-tomorrow.css";
 // import "prismjs/themes/prism-twilight.css";
 
 interface Props {

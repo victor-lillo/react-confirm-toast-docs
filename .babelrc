@@ -14,9 +14,9 @@
                 ],
                 "plugins": [
                     "keep-markup"
-                ]
-                // "theme": "okaidia",
-                // "css": true
+                ],
+                "theme": "tomorrow",
+                "css": true
             }
         ]
     ]

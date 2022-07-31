@@ -1,8 +1,27 @@
 .footer {
-  padding: 1rem;
-  font-size: 1.4rem;
+  padding: 2rem;
   background-color: var(--main-color);
   color: var(--secondary-letter-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  h3 {
+    font-weight: initial;
+  }
+
+  a {
+    text-decoration: underline;
+    transform: scale(1.5);
+  }
 }
 
 @media (hover: hover) {}

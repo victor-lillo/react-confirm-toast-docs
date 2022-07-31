@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import type { NextPage } from 'next'
 
@@ -6,9 +6,13 @@ import Layout from '@components/Layout';
 import Button from '@components/Button';
 import Section from '@components/Section';
 import Code from '@components/Code';
-// import ConfirmToast from '@components/ConfirmToast';
+import GitHub from '@components/icons/GitHub';
 
 import { ConfirmToast } from 'react-confirm-toast'
+// import ConfirmToast from '@components/ConfirmToast';
+
+import package_json from 'package.json'
+
 
 interface CompProps {
     asModal?: boolean,
@@ -41,7 +45,7 @@ const options = {
 
 const examples: ExampleProps[] = [
     {
-        name: "Example 1",
+        name: 'Example 1',
         asModal: false,
         showCloseIcon: true,
         customCancel: 'Cancel',
@@ -125,14 +129,19 @@ const Database: NextPage = () => {
             </Head>
 
             <Section width='full' background='black'>
-                <div className="title-container">
-                    <h1>react-confirm-toast</h1>
-                    <h3>Easy and light toast for confirming functions</h3>
+                <div className='title-container'>
+                    <div className="titles">
+                        <h1>react-confirm-toast</h1>
+                        <h3>Easy and light toast for confirming functions</h3>
+                    </div>
+                    <a target='_blank' href='https://github.com/fentosv/react-confirm-toast' rel='noopener noreferrer'>
+                        <GitHub />
+                    </a>
                 </div>
             </Section>
 
             <Section>
-                <div className="info-container">
+                <div className='info-container'>
                     <h1>Information</h1>
                     <section>
                         <h3>Install the package</h3>
@@ -154,7 +163,7 @@ const Database: NextPage = () => {
 
                 <div className='example-container'>
 
-                    <div className="code">
+                    <div className='code'>
                         <Code>
                             {compString(selectedExample)}
                         </Code>
@@ -215,6 +224,15 @@ const Database: NextPage = () => {
                             )
                         })}
                     </div>
+                </div>
+            </Section>
+
+            <Section>
+                <div className='version-container'>
+                    <p>Version {package_json.dependencies['react-confirm-toast'].replace('^', '')}</p>
+                    <a target='_blank' href='https://github.com/fentosv/react-confirm-toast' rel='noopener noreferrer'>
+                        <GitHub />
+                    </a>
                 </div>
             </Section>
         </Layout >
