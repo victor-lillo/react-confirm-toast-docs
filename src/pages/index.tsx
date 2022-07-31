@@ -13,18 +13,7 @@ import { ConfirmToast } from 'react-confirm-toast'
 
 import package_json from 'package.json'
 
-
-interface CompProps {
-    asModal?: boolean,
-    children: React.ReactNode,
-    showCloseIcon?: boolean,
-    customCancel?: string,
-    customConfirm?: string,
-    customFunction: Function,
-    message?: string,
-    position?: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right',
-    theme?: 'light' | 'dark' | 'snow' | 'lilac'
-}
+import { CompProps } from '@types'
 
 // We delete children and customFunction
 type NewProps = Omit<CompProps, 'children' | 'customFunction'>

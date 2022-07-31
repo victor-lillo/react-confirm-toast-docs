@@ -1,15 +1,11 @@
-
-export interface Item {
-    _id: string
-    category: string
-    title: string
-}
-
-export interface Category {
-    _id: string,
-    path: string,
-}
-
-export interface CategoryModified extends Category {
-    pathArray: string[]
+export interface CompProps {
+    asModal?: boolean,
+    children: React.ReactNode,
+    showCloseIcon?: boolean,
+    customCancel?: string,
+    customConfirm?: string,
+    customFunction: Function,
+    message?: string,
+    position?: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right',
+    theme?: 'light' | 'dark' | 'snow' | 'lilac'
 }
