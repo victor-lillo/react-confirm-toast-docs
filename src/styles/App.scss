@@ -39,7 +39,7 @@ body {
   padding: 3rem;
 
   h3 {
-    color: rgb(193, 193, 193);
+    color: var(--secondary-letter-color);
   }
 }
 
@@ -57,7 +57,7 @@ body {
   }
 
   h3 {
-    color: var(--button-color);
+    color: var(--main-color);
   }
 }
 
