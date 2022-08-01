@@ -1,5 +1,6 @@
 # react-confirm-toast documentation web
 
-[Github](https://github.com/fentosv/react-confirm-toast)
-[Npm](https://www.npmjs.com/package/react-confirm-toast)
+Check the repo [Github](https://github.com/fentosv/react-confirm-toast)
+
+Check the library [npm](https://www.npmjs.com/package/react-confirm-toast)
 
