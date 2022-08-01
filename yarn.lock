@@ -1805,10 +1805,10 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-confirm-toast@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/react-confirm-toast/-/react-confirm-toast-1.0.4.tgz#dbaa0e343cbc25ac36a79a682a80c858f8782384"
-  integrity sha512-XYTfJAglM8wKMOXiuF2PxGfThF4sVXQwDiTry55KGAinDRw/qROU3i13HJ6kGhlDnu01oWRWkCjyPX9T83nbmg==
+react-confirm-toast@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-confirm-toast/-/react-confirm-toast-1.0.5.tgz#6a9878a5c486965abf819da3c6f7335b51da1d80"
+  integrity sha512-hl8AB1+P9LRxpMS1EKua8yl/BRSKMfKu+wEKKU+bfunukWgxn9xKFaNceH1DDSkJWH/Uce5TxmR8GDcxHKhYfA==
   dependencies:
     classnames-creator "^1.0.6"
     react-icons "^4.4.0"
