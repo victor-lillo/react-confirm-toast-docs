@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "github-first-deploy": "node dev/first-deploy.js",
-    "github-update": "node dev/github-update.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "@types/prismjs": "^1.26.0",
